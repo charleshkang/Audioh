@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		21ED7B7341F50FE81DA616E0 /* Pods_AudiohTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBF092ECD5182B4733BC0CB /* Pods_AudiohTests.framework */; };
 		4062A5F34F76190AD7E52428 /* Pods_AudiohUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA1FD757FE82CBAD3E80556B /* Pods_AudiohUITests.framework */; };
+		533E7C5E1E2EBDD700E2D35F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E7C5D1E2EBDD700E2D35F /* User.swift */; };
 		5367EB861E2EAF4B00D4AC8B /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5367EB841E2EAF4B00D4AC8B /* SpotifyAudioPlayback.framework */; };
 		5367EB871E2EAF4B00D4AC8B /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5367EB851E2EAF4B00D4AC8B /* SpotifyAuthentication.framework */; };
 		53CE9B551E2EAAAC00279818 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CE9B541E2EAAAC00279818 /* AppDelegate.swift */; };
-		53CE9B571E2EAAAC00279818 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CE9B561E2EAAAC00279818 /* ViewController.swift */; };
 		53CE9B5A1E2EAAAC00279818 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53CE9B581E2EAAAC00279818 /* Main.storyboard */; };
 		53CE9B5C1E2EAAAC00279818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53CE9B5B1E2EAAAC00279818 /* Assets.xcassets */; };
 		53CE9B5F1E2EAAAC00279818 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53CE9B5D1E2EAAAC00279818 /* LaunchScreen.storyboard */; };
@@ -41,11 +41,12 @@
 /* Begin PBXFileReference section */
 		062422CDD793CD3A0BE431F4 /* Pods-Audioh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Audioh.release.xcconfig"; path = "Pods/Target Support Files/Pods-Audioh/Pods-Audioh.release.xcconfig"; sourceTree = "<group>"; };
 		38818837BF5725D7A9230608 /* Pods-Audioh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Audioh.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Audioh/Pods-Audioh.debug.xcconfig"; sourceTree = "<group>"; };
+		533E7C5D1E2EBDD700E2D35F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5367EB841E2EAF4B00D4AC8B /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
 		5367EB851E2EAF4B00D4AC8B /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAuthentication.framework; sourceTree = "<group>"; };
+		53872E2B1E2EC2FE003C20A9 /* Audioh-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Audioh-Bridging-Header.h"; sourceTree = "<group>"; };
 		53CE9B511E2EAAAC00279818 /* Audioh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Audioh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53CE9B541E2EAAAC00279818 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		53CE9B561E2EAAAC00279818 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		53CE9B591E2EAAAC00279818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53CE9B5B1E2EAAAC00279818 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53CE9B5E1E2EAAAC00279818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 		5367EB801E2EAF1100D4AC8B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				533E7C5D1E2EBDD700E2D35F /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -123,7 +125,6 @@
 		5367EB821E2EAF1800D4AC8B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				53CE9B561E2EAAAC00279818 /* ViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -139,6 +140,7 @@
 		53CE9B481E2EAAAC00279818 = {
 			isa = PBXGroup;
 			children = (
+				53872E2B1E2EC2FE003C20A9 /* Audioh-Bridging-Header.h */,
 				53CE9B531E2EAAAC00279818 /* Audioh */,
 				53CE9B681E2EAAAC00279818 /* AudiohTests */,
 				53CE9B731E2EAAAC00279818 /* AudiohUITests */,
@@ -497,8 +499,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53CE9B571E2EAAAC00279818 /* ViewController.swift in Sources */,
 				53CE9B551E2EAAAC00279818 /* AppDelegate.swift in Sources */,
+				533E7C5E1E2EBDD700E2D35F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +660,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.charleshkang.Audioh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Audioh-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -676,6 +679,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.charleshkang.Audioh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Audioh-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
