@@ -1,12 +1,6 @@
-//
-//  AppDelegate.swift
-//  Audioh
-//
-//  Created by Charles Kang on 1/17/17.
-//  Copyright © 2017 Charles Kang. All rights reserved.
-//
 
 import UIKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,8 +8,64 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
+//    - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+//    {
+//    // Spotify Authorization Initializers
+//    SPTAuth *auth = [SPTAuth defaultInstance];
+//    auth.clientID = @kClientId;
+//    auth.redirectURL = [NSURL URLWithString:@kCallbackURL];
+//    auth.requestedScopes = @[SPTAuthStreamingScope, SPTAuthPlaylistReadPrivateScope,
+//    SPTAuthUserReadPrivateScope, SPTAuthUserLibraryReadScope];
+//
+//    #ifdef kTokenSwapServiceURL
+//    auth.tokenSwapURL = [NSURL URLWithString:@kTokenSwapServiceURL];
+//#endif
+//#ifdef kTokenRefreshServiceURL
+//auth.tokenRefreshURL = [NSURL URLWithString:@kTokenRefreshServiceURL];
+//#endif
+//auth.sessionUserDefaultsKey = @kSessionUserDefaultsKey;
+//
+//VOLoginVC *loginVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"loginVC"];
+//UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:loginVC];
+//
+//if (auth.session == nil || ![auth.session isValid]) {
+//    [navigationController pushViewController:[VOLoginVC new] animated:NO];
+//} else {
+//    [[VOUser user] handle:auth.session];
+//}
+//
+//return YES;
+//}
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        let auth = SPTAuth()
+        auth.clientID = Constants.clientID
+        auth.redirectURL = URL(string: Constants.callBackURL)
+        auth.requestedScopes = [SPTAuthStreamingScope,
+                                SPTAuthPlaylistReadPrivateScope,
+                                SPTAuthUserReadPrivateScope,
+                                SPTAuthUserLibraryReadScope]
+        auth.tokenSwapURL = URL(string: Constants.tokenSwapServiceURL)
+        auth.tokenRefreshURL = URL(string: Constants.tokenRefreshServiceURL)
+        auth.sessionUserDefaultsKey = Constants.sessionUserDefaultsKey
+
+        let loginVC: LoginViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
+        let navigationController = UINavigationController(rootViewController: loginVC)
+        if auth.session == nil || auth.session.isValid() {
+            navigationController.pushViewController(loginVC, animated: false)
+        } else {
+
+//            VOUser.user?.handle(auth.session)
+        }
+
+
+
+
+
+
+
+
         return true
     }
 
